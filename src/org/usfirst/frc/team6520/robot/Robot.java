@@ -12,6 +12,8 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+import org.usfirst.frc.team6520.robot.commandgroups.CG_Left;
 import org.usfirst.frc.team6520.robot.commands.ExampleCommand;
 import org.usfirst.frc.team6520.robot.subsystems.ExampleSubsystem;
 
@@ -69,7 +71,7 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void autonomousInit() {
-		m_autonomousCommand = m_chooser.getSelected();
+		m_autonomousCommand = new CG_Left();
 
 		/*
 		 * String autoSelected = SmartDashboard.getString("Auto Selector",
