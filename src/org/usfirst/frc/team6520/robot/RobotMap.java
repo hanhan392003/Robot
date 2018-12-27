@@ -11,6 +11,10 @@ import org.usfirst.frc.team6520.robot.subsystems.SS_ConveyBelt;
 import org.usfirst.frc.team6520.robot.subsystems.SS_Drivebase;
 import org.usfirst.frc.team6520.robot.subsystems.SS_Grab;
 
+import edu.wpi.first.wpilibj.CounterBase.EncodingType;
+import edu.wpi.first.wpilibj.SPI.Port;
+import edu.wpi.first.wpilibj.ADXRS450_Gyro;
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.VictorSP;
 
 /**
@@ -20,6 +24,8 @@ import edu.wpi.first.wpilibj.VictorSP;
  * floating around.
  */
 public class RobotMap {
+	// gyro (if needed)
+	//public static ADXRS450_Gyro gyro = new ADXRS450_Gyro(Port.kOnboardCS0);
 	// convey belt
 	public static SS_ConveyBelt ss_conveybelt = new SS_ConveyBelt();
 	public static VictorSP belt = new VictorSP(0);
@@ -32,6 +38,7 @@ public class RobotMap {
 	//grab
 	public static SS_Grab ss_grab = new SS_Grab();
 	public static VictorSP grab = new VictorSP(3);
+	public static Encoder encoder =  new Encoder(9, 8, false, EncodingType.k4X);
 	
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.

@@ -8,6 +8,7 @@
 package org.usfirst.frc.team6520.robot;
 
 import org.usfirst.frc.team6520.robot.commands.C_Grab;
+import org.usfirst.frc.team6520.robot.commands.C_Grabb;
 import org.usfirst.frc.team6520.robot.commands.C_Out;
 import org.usfirst.frc.team6520.robot.commands.C_Roll;
 import org.usfirst.frc.team6520.robot.commands.C_Roll_1;
@@ -30,7 +31,7 @@ public class OI {
 	public OI() {
 		ROLL_A.whileHeld(new C_Roll());
 		ROLL_B.whileHeld(new C_Roll_1());
-		GRAB_X.whenPressed(new C_Grab(3));
+		GRAB_X.whenPressed(new C_Grabb(90));
 		OUT_Y.whenPressed(new C_Out(3));
 	}
 	//// CREATING BUTTONS

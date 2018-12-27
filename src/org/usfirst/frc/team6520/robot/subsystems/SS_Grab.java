@@ -8,6 +8,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  *
  */
 public class SS_Grab extends Subsystem {
+	
+	
 	public void grab() {
 		RobotMap.grab.set(0.2);
 	}
@@ -19,6 +21,7 @@ public class SS_Grab extends Subsystem {
 	public void stop() {
 		RobotMap.grab.set(0);
 	}
+	
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
