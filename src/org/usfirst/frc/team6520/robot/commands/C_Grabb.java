@@ -21,9 +21,10 @@ public class C_Grabb extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	while(RobotMap.encoder.getRaw() < angle) {
-    		RobotMap.grab.set(0.3);
-    	}
+    	RobotMap.grab.set(1);
+//    	while(RobotMap.encoder.getRaw() < angle) {
+//    		RobotMap.grab.set(0.3);
+//    	}
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -34,7 +35,7 @@ public class C_Grabb extends Command {
     // Called once after isFinished returns true
     protected void end() {
     	RobotMap.grab.set(0);
-    	RobotMap.encoder.reset();
+//    	RobotMap.encoder.reset();
     }
 
     // Called when another command which requires one or more of the same

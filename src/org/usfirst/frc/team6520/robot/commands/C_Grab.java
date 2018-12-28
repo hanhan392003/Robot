@@ -19,13 +19,14 @@ public class C_Grab extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	while((Timer.getFPGATimestamp()-initTime)<seconds) {
+    	RobotMap.ss_grab.grab();
+	}
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	while((Timer.getFPGATimestamp()-initTime)<seconds) {
-        	RobotMap.ss_grab.grab();
-    	}
+    	
     }
 
     // Make this return true when this Command no longer needs to run execute()

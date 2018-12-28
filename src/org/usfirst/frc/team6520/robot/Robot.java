@@ -112,6 +112,8 @@ public class Robot extends TimedRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		RobotMap.ss_drivebase.driveTwoJoysticks();
+//		RobotMap.ss_conveybelt.roll();
+		RobotMap.update();
 	}
 
 	/**

@@ -17,13 +17,18 @@ public class C_Roll extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-
-    	RobotMap.ss_conveybelt.roll();
+//    	RobotMap.ss_conveybelt.roll = !RobotMap.ss_conveybelt.roll;
+//    	if (RobotMap.ss_conveybelt.roll) {
+//    		RobotMap.ss_conveybelt.roll = false;
+//    	} else {
+//    		RobotMap.ss_conveybelt.roll = true;
+//    	}
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	
+//    	if (RobotMap.ss
+    	RobotMap.ss_conveybelt.roll();
     }
 
     // Make this return true when this Command no longer needs to run execute()

@@ -12,7 +12,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class SS_Drivebase extends Subsystem {
 
-	public final double speed = 0.5; 
+	public final double speed = 0.4; 
 	public double leftSpeed = speed; 
 	public double rightSpeed = -speed; 
 

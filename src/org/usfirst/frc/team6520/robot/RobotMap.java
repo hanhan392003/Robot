@@ -16,6 +16,7 @@ import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.VictorSP;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -49,4 +50,11 @@ public class RobotMap {
 	// number and the module. For example you with a rangefinder:
 	// public static int rangefinderPort = 1;
 	// public static int rangefinderModule = 1;
+	
+	public static void update() {
+		SmartDashboard.putNumber("speed", ss_drivebase.speed);
+		SmartDashboard.putBoolean("rolling?", ss_conveybelt.roll);
+		SmartDashboard.putBoolean("dir", ss_conveybelt.direction);
+		SmartDashboard.putNumber("encoder", encoder.getRaw());
+	}
 }

@@ -23,9 +23,11 @@ public class C_Out extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	while((Timer.getFPGATimestamp()-initTime)<seconds) {
-    		RobotMap.ss_grab.out();
-    	}
+//    	while((Timer.getFPGATimestamp()-initTime)<seconds) {
+//    		RobotMap.ss_grab.out();
+//    	}
+//    	RobotMap.grab.setInverted(true);
+    	RobotMap.grab.set(-1);
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -35,11 +37,14 @@ public class C_Out extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
-    	RobotMap.ss_grab.stop();
+//    	RobotMap.ss_grab.stop();
+
+    	RobotMap.grab.set(0);
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+//    	RobotMap.ss_grab.stop();
     }
 }

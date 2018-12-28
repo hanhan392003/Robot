@@ -16,10 +16,17 @@ public class C_Roll_1 extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	    }
+//    	RobotMap.ss_conveybelt.direction = !RobotMap.ss_conveybelt.direction;
+    	if (RobotMap.ss_conveybelt.direction) {
+    		RobotMap.ss_conveybelt.direction = false;
+    	} else {
+    		RobotMap.ss_conveybelt.direction = true;
+    	}
+   	    }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+
     	RobotMap.ss_conveybelt.roll_();
 
     }
@@ -37,6 +44,6 @@ public class C_Roll_1 extends Command {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
-    	RobotMap.ss_conveybelt.stop();
+//    	RobotMap.ss_conveybelt.stop/();
     }
 }
