@@ -25,15 +25,15 @@ import edu.wpi.first.wpilibj.VictorSP;
  */
 public class RobotMap {
 	// gyro (if needed)
-	//public static ADXRS450_Gyro gyro = new ADXRS450_Gyro(Port.kOnboardCS0);
+	public static ADXRS450_Gyro gyro = new ADXRS450_Gyro(Port.kOnboardCS0);
 	// convey belt
 	public static SS_ConveyBelt ss_conveybelt = new SS_ConveyBelt();
 	public static VictorSP belt = new VictorSP(0);
 	
 	// drivebase
 	public static SS_Drivebase ss_drivebase = new SS_Drivebase();
-	public static VictorSP left = new VictorSP(1);
-	public static VictorSP right = new VictorSP(2);
+	public static VictorSP left = new VictorSP(2);
+	public static VictorSP right = new VictorSP(1);
 	
 	//grab
 	public static SS_Grab ss_grab = new SS_Grab();

@@ -21,7 +21,7 @@ public class C_Grabb extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	while(RobotMap.encoder.getDistance() < angle) {
+    	while(RobotMap.encoder.getRaw() < angle) {
     		RobotMap.grab.set(0.3);
     	}
     }

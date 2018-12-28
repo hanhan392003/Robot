@@ -13,8 +13,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class SS_Drivebase extends Subsystem {
 
 	public final double speed = 0.6; 
-	public double leftSpeed = speed; 
-	public double rightSpeed = -speed; 
+	public double leftSpeed = -speed; 
+	public double rightSpeed = speed; 
 
 	public void leftSide() { //nhân giá trị joystick trái với hệ số (joystick của controller lái)
 		RobotMap.left.set(Robot.m_oi.gamepad.getRawAxis(5) * leftSpeed);
@@ -41,12 +41,12 @@ public class SS_Drivebase extends Subsystem {
 	}
 	
 	public void turn_right() {
-		RobotMap.left.set(0);
+		RobotMap.left.set(-leftSpeed);
 		RobotMap.right.set(rightSpeed);
 	}
 	
 	public void turn_left() {
-		RobotMap.right.set(0);
+		RobotMap.right.set(-rightSpeed);
 		RobotMap.left.set(leftSpeed);
 	}
 	public void stop() {
