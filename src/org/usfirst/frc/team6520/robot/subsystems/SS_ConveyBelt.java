@@ -17,7 +17,7 @@ public class SS_ConveyBelt extends Subsystem {
 	}
 	
 	public void stop() {
-		RobotMap.belt.set(0);
+		RobotMap.belt.stopMotor();
 	}
 
     // Put methods for controlling this subsystem

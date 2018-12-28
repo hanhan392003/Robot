@@ -1,5 +1,6 @@
 package org.usfirst.frc.team6520.robot.commands;
 
+import org.usfirst.frc.team6520.robot.Robot;
 import org.usfirst.frc.team6520.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -16,12 +17,12 @@ public class C_Roll extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+
+    	RobotMap.ss_conveybelt.roll();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-
-    	RobotMap.ss_conveybelt.roll();
     	
     }
 
@@ -38,5 +39,6 @@ public class C_Roll extends Command {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	RobotMap.ss_conveybelt.stop();
     }
 }
