@@ -23,16 +23,16 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  */
 public class OI {
 	public Joystick gamepad = new Joystick(0);
-	public Button ROLL_A = new JoystickButton(gamepad,1);
+	public Button ROLL_A = new JoystickButton(gamepad,4);
 	public Button ROLL_B = new JoystickButton(gamepad,2);
 	public Button GRAB_X = new JoystickButton(gamepad,3);
-	public Button OUT_Y = new JoystickButton(gamepad,4);
+	public Button OUT_Y = new JoystickButton(gamepad,1);
 	
 	public OI() {
 		ROLL_A.whileHeld(new C_Roll());
 		ROLL_B.whileHeld(new C_Roll_1());
-		GRAB_X.whileHeld(new C_Grabb(-90));
-		OUT_Y.whileHeld(new C_Out(3));
+		GRAB_X.whenPressed(new C_Grabb(-90));
+		OUT_Y.whenPressed(new C_Out(3));
 	}
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a

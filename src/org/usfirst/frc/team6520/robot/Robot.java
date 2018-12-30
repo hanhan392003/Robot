@@ -37,8 +37,10 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void robotInit() {
+		RobotMap.encoder.reset();
 		m_oi = new OI();
 		m_chooser.addDefault("Default Auto", new ExampleCommand());
+		RobotMap.gyro.reset();
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", m_chooser);
 	}

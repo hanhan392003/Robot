@@ -11,11 +11,11 @@ public class SS_Grab extends Subsystem {
 	
 	
 	public void grab() {
-		RobotMap.grab.set(0.2);
+		RobotMap.grab.set(0.001);
 	}
 	
 	public void out() {
-		RobotMap.grab.set(-0.2);
+		RobotMap.grab.set(-0.001);
 	}
 	
 	public void stop() {

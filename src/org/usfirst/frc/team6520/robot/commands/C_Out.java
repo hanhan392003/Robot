@@ -19,6 +19,9 @@ public class C_Out extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	while (RobotMap.encoder.getRaw() < -10) {
+    		RobotMap.grab.set(1);
+    	}
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -27,7 +30,7 @@ public class C_Out extends Command {
 //    		RobotMap.ss_grab.out();
 //    	}
 //    	RobotMap.grab.setInverted(true);
-    	RobotMap.grab.set(-1);
+//    	RobotMap.grab.set(-1);
     }
 
     // Make this return true when this Command no longer needs to run execute()

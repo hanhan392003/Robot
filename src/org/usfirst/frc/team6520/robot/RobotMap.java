@@ -25,7 +25,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * floating around.
  */
 public class RobotMap {
-	// gyro (if needed)
+	// gyro
 	public static ADXRS450_Gyro gyro = new ADXRS450_Gyro(Port.kOnboardCS0);
 	// convey belt
 	public static SS_ConveyBelt ss_conveybelt = new SS_ConveyBelt();

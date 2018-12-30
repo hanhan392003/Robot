@@ -19,13 +19,14 @@ public class C_Forward extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	while((Timer.getFPGATimestamp()-initTime)<seconds) {
+    		RobotMap.ss_drivebase.run_forward();
+    	}
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	while((Timer.getFPGATimestamp()-initTime)<seconds) {
-    		RobotMap.ss_drivebase.run_forward();
-    	}
+    	
     }
 
     // Make this return true when this Command no longer needs to run execute()

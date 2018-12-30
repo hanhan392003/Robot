@@ -17,11 +17,14 @@ public class C_Grabb extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	while (RobotMap.encoder.getRaw() > -200) {
+    		RobotMap.grab.set(-1);
+    	}
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	RobotMap.grab.set(1);
+//    	RobotMap.grab.set(1);
 //    	while(RobotMap.encoder.getRaw() < angle) {
 //    		RobotMap.grab.set(0.3);
 //    	}
